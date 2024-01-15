@@ -1,0 +1,22 @@
+.about-background {
+  background-color: var(--background-grey);
+  height: 100vh;
+  width: 100vw;
+}
+
+.about-text {
+  font-family: math; // TODO: CHECK THIS FONT
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: 550;
+  margin: 2.1rem;
+  line-height: 34px;
+}
+
+.m-b-0 {
+  margin-bottom: 0
+}
+
+.m-t-2 {
+  margin-top: 2rem;
+}

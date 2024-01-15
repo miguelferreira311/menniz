@@ -1,0 +1,12 @@
+<cdk-virtual-scroll-viewport scrollWindow itemSize="5" class="projects-container">
+  <div *cdkVirtualFor="let item of projects" class="flex-container">
+
+    <div class="left project-description">
+      {{item.description}}
+    </div>
+
+    <img class="right project-image" src="{{item.imageUrl}}" alt="{{item.name}}"
+         width="780" height="520"
+         (click)="selectProject(item)">
+  </div>
+</cdk-virtual-scroll-viewport>

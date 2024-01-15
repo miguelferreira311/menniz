@@ -1,0 +1,18 @@
+<div class="content">
+  <header class="flex-container fixed-header">
+    <img class="menniz-logo left" src="assets/layout-images/dark_letter_light_back.png" alt="MENNIZ" width="390" height="72">
+
+    <div class="right about-icon">
+      <app-rotate-button [expanded]="expanded" (expandedChange)="openAbout()"></app-rotate-button>
+    </div>
+  </header>
+
+  <div *ngIf="projectSelected && selectedProject; else verticalSlideshow">
+    <app-slideshow [selectedProject]="selectedProject" (onCloseShow)="showVerticalSlideshow()"></app-slideshow>
+  </div>
+
+  <ng-template #verticalSlideshow>
+    <app-vertical-slideshow (onProjectSelect)="showProject($event)"></app-vertical-slideshow>
+  </ng-template>
+
+</div>

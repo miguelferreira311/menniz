@@ -1,0 +1,13 @@
+<!--<gallery [items]="galleryItems"></gallery>-->
+
+<ngb-carousel class="img-wrapper">
+  @for (image of selectedImages; track image) {
+    <ng-template ngbSlide>
+      <img class="img-wrapper" [src]="image"/>
+    </ng-template>
+  }
+</ngb-carousel>
+
+<span class="close-slideshow">
+  <mat-icon class="arrow-icon" (click)="closeSlideShow()">west</mat-icon>
+</span>

@@ -1,0 +1,39 @@
+ngb-carousel {
+  text-align: center;
+}
+
+::ng-deep {
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 40%;
+  }
+  .carousel-control-prev-icon{
+    background-image: none
+  }
+  .carousel-control-next-icon{
+    background-image: none
+  }
+}
+
+.img-wrapper {
+  max-height: 90vh;
+  max-width: 90vw;
+  margin: auto;
+}
+
+.close-slideshow {
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  z-index: 999;
+}
+
+.arrow-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}
