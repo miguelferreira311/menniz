@@ -4,13 +4,15 @@ import {RotateButtonComponent} from "../rotate-button/rotate-button.component";
 import {FormsModule} from "@angular/forms";
 import {Router} from "@angular/router";
 import {aboutAnimation, slideInAnimation} from "../animations";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
     RotateButtonComponent,
-    FormsModule
+    FormsModule,
+    NgOptimizedImage
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'

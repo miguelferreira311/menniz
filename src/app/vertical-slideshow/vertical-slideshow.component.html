@@ -1,12 +1,16 @@
-<cdk-virtual-scroll-viewport scrollWindow itemSize="5" class="projects-container">
-  <div *cdkVirtualFor="let item of projects" class="flex-container">
 
-    <div class="left project-description">
-      {{item.description}}
+<div class="projects-container">
+  @for (item of projects; track item) {
+    <div [id]="'item_' + item.identifier" class="flex-container project-item">
+
+      <div [id]="'description_' + item.identifier" class="left project-description">
+        {{ item.description }}
+      </div>
+
+      <img [id]="'image_' + item.identifier" class="right project-image"
+           src="{{item.imageUrl}}" alt="{{item.name}}"
+           width="780" loading="eager"
+           (click)="selectProject(item)">
     </div>
-
-    <img class="right project-image" src="{{item.imageUrl}}" alt="{{item.name}}"
-         width="780" height="520"
-         (click)="selectProject(item)">
-  </div>
-</cdk-virtual-scroll-viewport>
+  }
+</div>

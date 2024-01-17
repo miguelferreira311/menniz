@@ -77,8 +77,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   order: 2;
 }
 
+img {
+  max-inline-size: 100%;
+}
+
 .fixed-header {
-  //position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 99;
 }
 
@@ -88,12 +93,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size: 3rem;
   margin-left: 2rem;
   margin-top: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .about-icon {
   margin-top: 2rem;
   margin-right: 2rem;
   text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 ::ng-deep.mat-bottom-sheet-container-medium {

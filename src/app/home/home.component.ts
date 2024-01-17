@@ -5,7 +5,8 @@ import {Router} from "@angular/router";
 import {SlideshowComponent} from "../slideshow/slideshow.component";
 import {VerticalSlideshowComponent} from "../vertical-slideshow/vertical-slideshow.component";
 import {Projects} from "../constants-types";
-import {NgIf} from "@angular/common";
+import {NgIf, NgOptimizedImage} from "@angular/common";
+import {ProjectItem} from "../vertical-slideshow/projects-config";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import {NgIf} from "@angular/common";
     FormsModule,
     VerticalSlideshowComponent,
     NgIf,
-    SlideshowComponent
+    SlideshowComponent,
+    NgOptimizedImage
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -25,7 +27,7 @@ export class HomeComponent {
   public expanded: boolean = false;
 
   public projectSelected: boolean = false;
-  public selectedProject: Projects | undefined;
+  public selectedProject: ProjectItem | undefined;
 
   constructor(private _router: Router) {
   }
@@ -34,7 +36,7 @@ export class HomeComponent {
     void this._router.navigate(['/about']);
   }
 
-  showProject(event: Projects) {
+  showProject(event: ProjectItem) {
     this.selectedProject = event;
     this.projectSelected = true;
   }

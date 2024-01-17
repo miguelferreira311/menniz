@@ -1,6 +1,9 @@
 .projects-container {
   margin: 2rem;
-  margin-top: 250px;
+}
+
+.project-item {
+  height: 100vh;
 }
 
 .project-description {
@@ -13,6 +16,9 @@
 }
 
 .project-image {
-  margin-top: 2rem;
+  margin-top: auto;
   margin-bottom: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
 }

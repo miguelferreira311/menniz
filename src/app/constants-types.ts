@@ -1,7 +1,7 @@
 export enum Projects {
-  ABRIL_25 = 1,
-  MIRANTE = 2,
-  FREITAS_REIS = 3,
-  INFANTE_SAGRES = 4,
-  JOAO_BRANCO = 5
+  JOAO_BRANCO = 1,
+  ABRIL_25 = 2,
+  MIRANTE = 3,
+  FREITAS_REIS = 4,
+  INFANTE_SAGRES = 5
 }
