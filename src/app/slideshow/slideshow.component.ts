@@ -30,6 +30,7 @@ export class SlideshowComponent implements OnInit {
     config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = true;
+    config.pauseOnFocus = true;
     config.showNavigationIndicators = false;
     config.animation = true;
   }

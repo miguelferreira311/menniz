@@ -22,8 +22,11 @@ export class AboutComponent {
 
   constructor(private _router: Router) {}
 
-  closeAbout() {
+  closeAbout(): void {
     void this._router.navigate(['/home']);
   }
 
+  openMail(): void {
+    window.location.href = "mailto:info@menniz.com?subject=MENNIZ"
+  }
 }

@@ -1,7 +1,7 @@
 
 <div class="projects-container">
   @for (item of projects; track item) {
-    <div [id]="'item_' + item.identifier" class="flex-container project-item">
+    <div [id]="'item_' + item.identifier" class="flex-container {{item.identifier == 1 ? 'project-item': ''}}">
 
       <div [id]="'description_' + item.identifier" class="left project-description">
         {{ item.description }}

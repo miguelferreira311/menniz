@@ -2,7 +2,8 @@ import {Projects} from "../constants-types";
 
 export const IMAGES_BY_PROJECT = {
   [Projects.JOAO_BRANCO]: [
-    'assets/images/01_Joao_Branco/00_Photoshoot1V2A4317-HDR.jpg',
+    'assets/images/01_Joao_Branco/00_01_Joao_Branco.jpeg',
+    'assets/images/01_Joao_Branco/01_Photoshoot1V2A4317-HDR.jpg',
     'assets/images/01_Joao_Branco/Drone (2).jpg',
     'assets/images/01_Joao_Branco/Drone (4).jpg',
     'assets/images/01_Joao_Branco/Photoshoot (3).jpg',
@@ -27,7 +28,8 @@ export const IMAGES_BY_PROJECT = {
     'assets/images/01_Joao_Branco/zz.jpg'
   ],
   [Projects.ABRIL_25]: [
-    'assets/images/02_25 de Abril/00_1V2A6259-Pano-Pano-Editar.jpg',
+    'assets/images/02_25 de Abril/00_teste.jpeg',
+    'assets/images/02_25 de Abril/1_1V2A6259-Pano-Pano-Editar.jpg',
     'assets/images/02_25 de Abril/1V2A6063-Editar.jpg',
     'assets/images/02_25 de Abril/1V2A6104.jpg',
     'assets/images/02_25 de Abril/1V2A6136.jpg',

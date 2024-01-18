@@ -7,9 +7,9 @@
 .about-text {
   font-family: math; // TODO: CHECK THIS FONT
   width: 50%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 550;
-  margin: 8rem 2.1rem 2.1rem;
+  margin: 2.1rem;
   line-height: 34px;
 }
 
@@ -23,6 +23,14 @@
   margin-bottom: 0
 }
 
+.m-b-1 {
+  margin-bottom: 1rem;
+}
+
 .m-t-2 {
   margin-top: 2rem;
+}
+
+.email-menniz {
+  cursor: pointer;
 }

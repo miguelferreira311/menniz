@@ -39,10 +39,16 @@ export class HomeComponent {
   showProject(event: ProjectItem) {
     this.selectedProject = event;
     this.projectSelected = true;
+    // const element = document.getElementById('menniz-logo');
+    // // @ts-ignore
+    // element.className = 'shortened-element';
   }
 
   showVerticalSlideshow() {
     this.projectSelected = false;
     this.selectedProject = undefined;
+    // const element = document.getElementById('menniz-logo');
+    // // @ts-ignore
+    // element.className = 'shortened-element';
   }
 }
