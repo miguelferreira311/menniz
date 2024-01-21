@@ -75,7 +75,8 @@ export const routeTransitionAnimations = trigger('triggerName', [
   ]),
   transition('about => home', [
     style({ transform: 'translateY(0)', opacity: 1 }),
-    animate('500ms ease-out', style({ transform: 'translateY(100%)', opacity: 0 })),
+    // PREVIOUSLY: animate('500ms ease-out', style({ transform: 'translateY(100%)', opacity: 0 })),
+    style({ transform: 'translateY(100%)', opacity: 0 }),
   ])
 ]);
 

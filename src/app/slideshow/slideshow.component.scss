@@ -7,25 +7,24 @@ ngb-carousel {
     .carousel-control-next-icon, .carousel-control-prev-icon {
       width: 3rem;
       height: 3rem;
+      background-image: none;
     }
 
     .carousel-control-prev, .carousel-control-next {
       width: 20%;
     }
+    .carousel-control-prev {
+      padding-right: 3rem;
+    }
+    .carousel-control-next {
+      padding-left: 3rem;
+    }
 
     button {
-      .carousel-control-prev-icon {
-        background-image: none;
-      }
-
       &:hover {
         .carousel-control-prev-icon {
           background-image: url("../../assets/svg/chevron_left.svg");
         }
-      }
-
-      .carousel-control-next-icon {
-        background-image: none;
       }
 
       &:hover {
@@ -46,8 +45,8 @@ ngb-carousel {
 
 .close-slideshow {
   position: absolute;
-  bottom: 3rem;
-  right: 4rem;
+  bottom: 1rem;
+  right: 2rem;
   z-index: 99;
 }
 
@@ -60,8 +59,8 @@ ngb-carousel {
 .project-name-slide {
   font-family: math; // TODO: CHECK THIS FONT
   position: absolute;
-  bottom: 3rem;
-  left: 4rem;
+  bottom: 1rem;
+  left: 2rem;
   z-index: 99;
   font-size: 1.5rem;
   font-weight: 600;

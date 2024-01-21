@@ -39,16 +39,20 @@ export class HomeComponent {
   showProject(event: ProjectItem) {
     this.selectedProject = event;
     this.projectSelected = true;
-    // const element = document.getElementById('menniz-logo');
-    // // @ts-ignore
-    // element.className = 'shortened-element';
+    const element = document.getElementById('menniz-logo');
+    // @ts-ignore
+    element.classList.remove('menniz-logo');
+    // @ts-ignore
+    element.className = 'shortened-element';
   }
 
   showVerticalSlideshow() {
     this.projectSelected = false;
     this.selectedProject = undefined;
-    // const element = document.getElementById('menniz-logo');
-    // // @ts-ignore
-    // element.className = 'shortened-element';
+    const element = document.getElementById('menniz-logo');
+    // @ts-ignore
+    element.classList.remove('shortened-element');
+    // @ts-ignore
+    element.className = 'menniz-logo';
   }
 }
