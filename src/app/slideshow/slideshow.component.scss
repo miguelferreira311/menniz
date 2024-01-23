@@ -1,5 +1,12 @@
+$container-height: 100vh;
+
 ngb-carousel {
   text-align: center;
+  height: $container-height;
+
+  ::ng-deep .carousel-inner {
+    margin-top: calc((#{$container-height} - #{imageHeight()}) / 2);
+  }
 }
 
 :host {

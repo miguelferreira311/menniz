@@ -1,9 +1,9 @@
 <!--<gallery [items]="galleryItems"></gallery>-->
 
-<ngb-carousel class="img-wrapper">
+<ngb-carousel #carousel class="img-wrapper">
   @for (image of selectedImages; track image) {
     <ng-template ngbSlide>
-      <img class="img-wrapper" [src]="image" loading="eager"/>
+      <img #carouselImages class="img-wrapper" [src]="image" loading="eager" (click)="togglePaused()"/>
     </ng-template>
   }
 </ngb-carousel>

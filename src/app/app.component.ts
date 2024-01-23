@@ -1,15 +1,15 @@
-import {Component} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {Component, HostListener} from '@angular/core';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ChildrenOutletContexts, RouterOutlet} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {RotateButtonComponent} from "./rotate-button/rotate-button.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {aboutAnimation, routeTransitionAnimations, slideInAnimation} from "./animations";
+import {routeTransitionAnimations} from "./animations";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule, RotateButtonComponent],
+  imports: [CommonModule, RouterOutlet, FormsModule, RotateButtonComponent, MatIconModule, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
@@ -17,19 +17,30 @@ import {aboutAnimation, routeTransitionAnimations, slideInAnimation} from "./ani
   ]
 })
 export class AppComponent {
+  public isPortrait: boolean | undefined;
   public readonly title: string = 'MENNIZ';
 
-  constructor(private contexts: ChildrenOutletContexts) {}
-
-  getRouteAnimationData() {
-    console.log(this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation']);
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  @HostListener('window:resize', ['$event'])
+  onResize(_event: Event): void {
+    this._checkOrientation();
   }
 
-  prepareRoute(outlet: RouterOutlet) {
+  constructor() {
+    this._checkOrientation();
+  }
+
+  protected prepareRoute(outlet: RouterOutlet) {
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];
   }
 
+  private _checkOrientation(): void {
+    this.isPortrait = this._isMobileDevice() && window.innerHeight > window.innerWidth;
+  }
+
+  private _isMobileDevice(): boolean {
+    const userAgent: string = navigator.userAgent;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+  }
 }

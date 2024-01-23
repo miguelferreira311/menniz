@@ -4,7 +4,13 @@
   <!--  </div>-->
 
   <!--  <div class="router-wrap" [@triggerName]="prepareRoute(outlet)">-->
-  <div class="router-wrap" [@triggerName]="prepareRoute(outlet)">
+  <div *ngIf="isPortrait" class="rotate-device">
+    <img class="m-b-2" src="assets/layout-images/menniz_white_no_background.png" alt="MENNIZ" width="262" height="48">
+    <p>Please rotate your device for a better experience.</p>
+    <mat-icon class="rotate-icon">screen_rotation</mat-icon>
+  </div>
+
+  <div *ngIf="!isPortrait" class="router-wrap" [@triggerName]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 </main>
