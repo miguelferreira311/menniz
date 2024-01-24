@@ -18,13 +18,6 @@ import {NgOptimizedImage} from "@angular/common";
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  expanded: boolean = true;
-
-  constructor(private _router: Router) {}
-
-  closeAbout(): void {
-    void this._router.navigate(['/home']);
-  }
 
   openMail(): void {
     window.location.href = "mailto:info@menniz.com?subject=MENNIZ"

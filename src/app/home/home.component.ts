@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import {RotateButtonComponent} from "../rotate-button/rotate-button.component";
 import {FormsModule} from "@angular/forms";
-import {Router} from "@angular/router";
 import {SlideshowComponent} from "../slideshow/slideshow.component";
 import {VerticalSlideshowComponent} from "../vertical-slideshow/vertical-slideshow.component";
-import {Projects} from "../constants-types";
 import {NgIf, NgOptimizedImage} from "@angular/common";
 import {ProjectItem} from "../vertical-slideshow/projects-config";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-home',
@@ -17,24 +16,16 @@ import {ProjectItem} from "../vertical-slideshow/projects-config";
     VerticalSlideshowComponent,
     NgIf,
     SlideshowComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatIconModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   public readonly title: string = 'MENNIZ';
-  public expanded: boolean = false;
-
   public projectSelected: boolean = false;
   public selectedProject: ProjectItem | undefined;
-
-  constructor(private _router: Router) {
-  }
-
-  openAbout() {
-    void this._router.navigate(['/about']);
-  }
 
   showProject(event: ProjectItem) {
     this.selectedProject = event;

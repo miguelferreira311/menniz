@@ -27,7 +27,7 @@ import {ProjectItem} from "../vertical-slideshow/projects-config";
   styleUrl: './slideshow.component.scss',
   providers: [NgbCarouselConfig]
 })
-export class SlideshowComponent implements OnInit, AfterViewInit {
+export class SlideshowComponent implements OnInit {
   @Input() selectedProject: ProjectItem | undefined;
   @Output() public onCloseShow: EventEmitter<boolean> = new EventEmitter();
   public galleryItems: GalleryItem[] = [];
@@ -49,25 +49,6 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
     config.animation = true;
   }
 
-
-  ngAfterViewInit() {
-    // @ts-ignore
-    this.carouselImages.changes.subscribe(() => {
-      // @ts-ignore
-      this.carouselImages.forEach(imageElement => {
-        const image = imageElement.nativeElement;
-        if (image.complete) {
-          this.handleImageLoad(image);
-        } else {
-          // Set up a load event listener
-          image.onload = () => {
-            this.handleImageLoad(image);
-          };
-        }
-      });
-    })
-  }
-
   protected togglePaused(): void {
     if (this.paused) {
       // @ts-ignore
@@ -77,16 +58,6 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
       this.carousel.pause();
     }
     this.paused = !this.paused;
-  }
-
-  private handleImageLoad(image: HTMLImageElement): void {
-    const imageHeight = image.offsetHeight;
-    console.log(imageHeight);
-    this.renderer.setStyle(
-      image,
-      'margin-top',
-      `calc((100vh - ${imageHeight}px) / 2)`
-    );
   }
 
   ngOnInit() {

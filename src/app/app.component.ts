@@ -1,6 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {ChildrenOutletContexts, RouterOutlet} from '@angular/router';
+import {ChildrenOutletContexts, Router, RouterOutlet} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {RotateButtonComponent} from "./rotate-button/rotate-button.component";
 import {routeTransitionAnimations} from "./animations";
@@ -25,7 +25,7 @@ export class AppComponent {
     this._checkOrientation();
   }
 
-  constructor() {
+  constructor(private _router: Router) {
     this._checkOrientation();
   }
 
@@ -42,5 +42,31 @@ export class AppComponent {
   private _isMobileDevice(): boolean {
     const userAgent: string = navigator.userAgent;
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+  }
+
+  openAbout(): void {
+    if (this._router.url.includes('about')) {
+      this.revertIcon();
+      return void this._router.navigate(['/home']);
+    }
+
+    this.rotateIcon();
+    void this._router.navigate(['/about']);
+  }
+
+  rotateIcon() {
+    const element = document.getElementById('openCloseIcon');
+    // @ts-ignore
+    element.classList.remove('add-icon');
+    // @ts-ignore
+    element.classList.add('rotate-about');
+  }
+
+  revertIcon() {
+    const element = document.getElementById('openCloseIcon');
+    // @ts-ignore
+    element.classList.remove('rotate-about');
+    // @ts-ignore
+    element.classList.add('add-icon');
   }
 }

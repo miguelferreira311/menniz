@@ -34,5 +34,9 @@ ng run menniz:deploy-ghpages
 ``
 
 2.``
+move all the content inside the folder './docs/browser' to the folder './docs'
+``
+
+3.``
 git add . && git commit -m 'Your commit message.' && git push
 ``

@@ -1,19 +1,19 @@
 <div class="content">
-
   <header class="fixed-header">
-    <img id="menniz-logo" class="menniz-logo" ngSrc="assets/layout-images/menniz_black_no_background.png" alt="MENNIZ" width="390" height="72" priority>
-
-    <div class="about-icon">
-      <app-rotate-button [expanded]="expanded" (expandedChange)="openAbout()"></app-rotate-button>
-    </div>
+    <img id="menniz-logo"class="menniz-logo"
+         ngSrc="assets/layout-images/menniz_black_no_background.png"
+         alt="MENNIZ" width="390" height="72" priority>
   </header>
 
   <div *ngIf="projectSelected && selectedProject; else verticalSlideshow">
-    <app-slideshow [selectedProject]="selectedProject" (onCloseShow)="showVerticalSlideshow()"></app-slideshow>
+    <app-slideshow [selectedProject]="selectedProject"
+                   (onCloseShow)="showVerticalSlideshow()">
+    </app-slideshow>
   </div>
 
   <ng-template #verticalSlideshow>
-    <app-vertical-slideshow (onProjectSelect)="showProject($event)"></app-vertical-slideshow>
+    <app-vertical-slideshow (onProjectSelect)="showProject($event)">
+    </app-vertical-slideshow>
   </ng-template>
 
 </div>
