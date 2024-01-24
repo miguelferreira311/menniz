@@ -15,17 +15,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  //overflow: hidden;
-  //
-  //.router-wrap {
-  //  position: relative;
-  //}
-  //
-  //::ng-deep router-outlet ~ * {
-  //  position: absolute;
-  //  width: 100%;
-  //}
 }
 
 .main {
@@ -46,7 +35,6 @@
 }
 
 .fixed-header {
-  // position: absolute;
   z-index: 99;
 }
 

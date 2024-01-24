@@ -63,7 +63,6 @@ export class SlideshowComponent implements OnInit {
   ngOnInit() {
     // @ts-ignore
     this.selectedImages = this._allImages[this.selectedProject?.identifier];
-    console.log('SELECTED PROJECT ==> ', this.selectedProject);
     this.galleryItems = this.selectedImages.map((img: string, index: number): GalleryItem => {
       return new ImageItem({src: img, thumb: `${this.selectedProject?.identifier}_${index}`})
     })

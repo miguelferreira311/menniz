@@ -1,14 +1,11 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {ProjectItem, PROJECTS} from "./projects-config";
-import {RotateButtonComponent} from "../rotate-button/rotate-button.component";
-import {Projects} from "../constants-types";
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-vertical-slideshow',
   standalone: true,
   imports: [
-    RotateButtonComponent,
     NgOptimizedImage
   ],
   templateUrl: './vertical-slideshow.component.html',
@@ -20,7 +17,6 @@ export class VerticalSlideshowComponent {
   public projects: ProjectItem[] = PROJECTS;
 
   public selectProject(project: ProjectItem) {
-    console.log('SELECTED PROJECT ==> ', project);
     this.onProjectSelect.emit(project);
   }
 }

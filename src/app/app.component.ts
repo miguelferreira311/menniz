@@ -1,20 +1,16 @@
-import {Component, HostListener} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {ChildrenOutletContexts, Router, RouterOutlet} from '@angular/router';
+import { RouterOutlet} from '@angular/router';
 import {FormsModule} from "@angular/forms";
-import {RotateButtonComponent} from "./rotate-button/rotate-button.component";
-import {routeTransitionAnimations} from "./animations";
 import {MatIconModule} from "@angular/material/icon";
+import {AboutService} from "./services/about.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule, RotateButtonComponent, MatIconModule, NgOptimizedImage],
+  imports: [CommonModule, RouterOutlet, FormsModule, MatIconModule, NgOptimizedImage],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  animations: [
-    routeTransitionAnimations
-  ]
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   public isPortrait: boolean | undefined;
@@ -25,14 +21,9 @@ export class AppComponent {
     this._checkOrientation();
   }
 
-  constructor(private _router: Router) {
+  constructor(public aboutService: AboutService,
+              private cdr: ChangeDetectorRef) {
     this._checkOrientation();
-  }
-
-  protected prepareRoute(outlet: RouterOutlet) {
-    return outlet &&
-      outlet.activatedRouteData &&
-      outlet.activatedRouteData['animationState'];
   }
 
   private _checkOrientation(): void {
@@ -45,13 +36,14 @@ export class AppComponent {
   }
 
   openAbout(): void {
-    if (this._router.url.includes('about')) {
-      this.revertIcon();
-      return void this._router.navigate(['/home']);
+    this.aboutService.toggleVisibility();
+    this.cdr.detectChanges();
+
+    if (this.aboutService.isVisibleSubject) {
+      return this.rotateIcon();
     }
 
-    this.rotateIcon();
-    void this._router.navigate(['/about']);
+    this.revertIcon();
   }
 
   rotateIcon() {

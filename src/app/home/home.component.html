@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" [class.hidden]="(aboutService.isVisible$ | async)">
   <header class="fixed-header">
     <img id="menniz-logo"class="menniz-logo"
          ngSrc="assets/layout-images/menniz_black_no_background.png"
@@ -15,5 +15,6 @@
     <app-vertical-slideshow (onProjectSelect)="showProject($event)">
     </app-vertical-slideshow>
   </ng-template>
-
 </div>
+
+<app-about class="about-on-top"></app-about>
