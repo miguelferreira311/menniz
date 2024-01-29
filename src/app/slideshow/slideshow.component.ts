@@ -46,7 +46,34 @@ export class SlideshowComponent implements OnInit {
     config.pauseOnHover = true;
     config.pauseOnFocus = true;
     config.showNavigationIndicators = false;
-    config.animation = true;
+    config.animation = false;
+  }
+
+  // 08_Photoshoot (3).jpg
+  // 07_Photoshoot (6)_ajustada4.jpg
+  // 06_Photoshoot (22)_ajustada.jpg
+  // 02_Photoshoot (11).jpg
+  // 01_Photoshoot (4).jpg
+  // 00_Photoshoot (21).jpg
+  // 04_Photoshoot (8)_ajustada1.jpg
+  // 11_Photoshoot 1V2A5987-HDR_versao cortada.png
+  // 06_1V2A6470.jpg
+  // 05_1V2A6063-Editar_ajustada.jpg
+  // 04_1V2A6162.jpg
+  // 03_1V2A6374-Pano-Editar-2.jpg
+  // 02_1V2A6465-Pano.jpg
+  // 02_1V2A5580-Panorノica HDR.jpg
+  // 03_1V2A5707-Editar.jpg
+  // 00_1V2A5596-Panorノica HDR.jpg
+  // 02_IMG_9894_ajustada v3.jpg
+  // 01_1V2A0121-Pano.jpg
+  // 00_1V2A0107-Pano.jpg
+  ngOnInit() {
+    // @ts-ignore
+    this.selectedImages = this._allImages[this.selectedProject?.identifier];
+    this.galleryItems = this.selectedImages.map((img: string, index: number): GalleryItem => {
+      return new ImageItem({src: img, thumb: `${this.selectedProject?.identifier}_${index}`})
+    })
   }
 
   protected togglePaused(): void {
@@ -58,14 +85,6 @@ export class SlideshowComponent implements OnInit {
       this.carousel.pause();
     }
     this.paused = !this.paused;
-  }
-
-  ngOnInit() {
-    // @ts-ignore
-    this.selectedImages = this._allImages[this.selectedProject?.identifier];
-    this.galleryItems = this.selectedImages.map((img: string, index: number): GalleryItem => {
-      return new ImageItem({src: img, thumb: `${this.selectedProject?.identifier}_${index}`})
-    })
   }
 
   closeSlideShow() {

@@ -1,23 +1,17 @@
 
 .about-background {
-  background-color: var(--background-grey);
+  background-color: var(--background-beige);
   min-height: 100vh;
   min-width: 100vw;
 }
 
 .about-text {
-  font-family: math; // TODO: CHECK THIS FONT
+  font-family: 'ABCArizona';
   width: 50%;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 550;
-  padding: 2.1rem;
+  padding: 2.1rem 2.1rem 1.4rem;
   line-height: 34px;
-}
-
-.about-icon-close {
-  margin-top: 1rem;
-  margin-right: 1rem;
-  text-align: right;
 }
 
 .m-b-0 {

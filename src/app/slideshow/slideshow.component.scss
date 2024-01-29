@@ -56,18 +56,19 @@ ngb-carousel {
 }
 
 .arrow-icon {
+  cursor: pointer;
   font-size: 40px;
   width: 40px;
   height: 40px;
 }
 
 .project-name-slide {
-  font-family: math; // TODO: CHECK THIS FONT
+  font-family: 'ABCArizona';
   position: absolute;
   bottom: 1rem;
   left: 2rem;
   z-index: 99;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 550;
   color: var(--grey-letter);
 }

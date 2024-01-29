@@ -19,6 +19,6 @@ export const slideUpDownAnimation: AnimationTriggerMetadata = trigger('slideUpDo
       transform: 'translateY(0)', display: 'block'
     })
   ),
-  transition('hidden => visible', animate('0.5s ease-in-out')),
-  transition('visible => hidden', animate('0.5s ease-in-out')),
+  transition('hidden => visible', animate('1s ease-in-out')),
+  transition('visible => hidden', animate('1s ease-in-out')),
 ]);

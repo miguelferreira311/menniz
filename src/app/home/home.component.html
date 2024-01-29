@@ -1,6 +1,6 @@
 <div class="content" [class.hidden]="(aboutService.isVisible$ | async)">
   <header class="fixed-header">
-    <img id="menniz-logo"class="menniz-logo"
+    <img id="menniz-logo" class="menniz-logo" (click)="showVerticalSlideshow()"
          ngSrc="assets/layout-images/menniz_black_no_background.png"
          alt="MENNIZ" width="390" height="72" priority>
   </header>

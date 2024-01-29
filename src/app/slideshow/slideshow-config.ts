@@ -8,20 +8,18 @@ export const IMAGES_BY_PROJECT = {
     'assets/images/01_Joao_Branco/03_1V2A5711.jpg',
     'assets/images/01_Joao_Branco/04_Photoshoot (8)_ajustada1.jpg',
     'assets/images/01_Joao_Branco/05_Drone (4)_ajustada1.jpg',
-    'assets/images/01_Joao_Branco/06_Photoshoot (22)_ajustada.jpg',
-    'assets/images/01_Joao_Branco/07_Photoshoot (6)_ajustada4.jpg',
+    'assets/images/01_Joao_Branco/06_Photoshoot (6)_ajustada4.jpg',
+    'assets/images/01_Joao_Branco/07_Photoshoot (22)_ajustada.jpg',
     'assets/images/01_Joao_Branco/08_Photoshoot (3).jpg',
     'assets/images/01_Joao_Branco/09_zz.jpg',
-    'assets/images/01_Joao_Branco/10_yy_ajustado.jpg',
-    'assets/images/01_Joao_Branco/11_Photoshoot 1V2A5987-HDR_versao cortada.png',
-    'assets/images/01_Joao_Branco/12_Drone (2).jpg'
+    'assets/images/01_Joao_Branco/10_Photoshoot 1V2A5987-HDR_versao cortada.png',
+    'assets/images/01_Joao_Branco/11_Drone (2).jpg'
   ],
   [Projects.ABRIL_25]: [
     'assets/images/02_25 de Abril/00_1V2A6224.jpg',
-    'assets/images/02_25 de Abril/01_1V2A6302-Pano.jpg',
-    'assets/images/02_25 de Abril/02_1V2A6465-Pano.jpg',
-    'assets/images/02_25 de Abril/03_1V2A6374-Pano-Editar-2.jpg',
-    'assets/images/02_25 de Abril/04_1V2A6162.jpg',
+    'assets/images/02_25 de Abril/02_1V2A6162.jpg',
+    'assets/images/02_25 de Abril/03_1V2A6465-Pano.jpg',
+    'assets/images/02_25 de Abril/04_1V2A6374-Pano-Editar-2.jpg',
     'assets/images/02_25 de Abril/05_1V2A6063-Editar_ajustada.jpg',
     'assets/images/02_25 de Abril/06_1V2A6470.jpg'
   ],
@@ -42,7 +40,6 @@ export const IMAGES_BY_PROJECT = {
   ],
   [Projects.INFANTE_SAGRES]: [
     'assets/images/05_Infante Sagres/00_1V2A8029-Pano-Editar.jpg',
-    'assets/images/05_Infante Sagres/01_1V2A8018.jpg',
     'assets/images/05_Infante Sagres/02_1V2A8036-Editar.jpg',
     'assets/images/05_Infante Sagres/03_1V2A8081.jpg',
     'assets/images/05_Infante Sagres/04_X_1V2A8072.jpg',

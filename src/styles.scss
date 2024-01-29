@@ -43,12 +43,12 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'ABCArizona';
 }
 
 :host {
   --background-light: #fffffe;
-  --background-grey: #dfdfd7;
+  --background-beige: #f0e0c7;
   --background-dark: #1a1919;
 
   --dark-icon: #323130;
@@ -63,6 +63,13 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'ABCArizona';
+  src: url('assets/fonts/ABC Arizona Text/ABCArizonaText-Regular-Trial.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .main {
@@ -98,6 +105,7 @@ img {
 }
 
 .menniz-logo {
+  cursor: pointer;
   margin-left: 1.5rem;
   margin-top: 1.5rem;
   position: absolute;
@@ -108,8 +116,8 @@ img {
 }
 
 .about-icon {
-  margin-top: 1.4rem !important;
-  margin-right: 1.4rem !important;
+  margin-top: 21px !important;
+  margin-right: 21px !important;
   text-align: right;
   position: absolute;
   top: 0;
@@ -121,20 +129,21 @@ img {
   width: 60px !important;
   font-size: 60px;
   cursor: pointer;
-  transition: transform 0.6s;
+  transition: transform 1s;
 }
 
 .rotate-about {
+  position: sticky;
   height: 60px !important;
   width: 60px !important;
   font-size: 60px;
   cursor: pointer;
   transform: rotate(45deg);
-  transition: transform 0.6s;
+  transition: transform 1s;
 }
 
 ::ng-deep.mat-bottom-sheet-container-medium {
-  background-color: var(--background-grey);
+  background-color: var(--background-beige);
   max-width: 100vw;
   width: 100vw !important;
   height: 100vh !important;
