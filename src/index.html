@@ -17,6 +17,12 @@
 <body>
 <app-root></app-root>
 
+<script>
+  // To disallow users to download the images of the website
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+</script>
 </body>
 
 </html>
