@@ -16,33 +16,33 @@ export const IMAGES_BY_PROJECT = {
     'assets/images/01_Joao_Branco/11_Drone (2).jpg'
   ],
   [Projects.ABRIL_25]: [
-    'assets/images/02_25 de Abril/00_1V2A6224.jpg',
-    'assets/images/02_25 de Abril/02_1V2A6162.jpg',
-    'assets/images/02_25 de Abril/03_1V2A6465-Pano.jpg',
-    'assets/images/02_25 de Abril/04_1V2A6374-Pano-Editar-2.jpg',
-    'assets/images/02_25 de Abril/05_1V2A6063-Editar_ajustada.jpg',
-    'assets/images/02_25 de Abril/06_1V2A6470.jpg'
+    'assets/images/02_25 de Abril/00_1V2A6224-Aprimorado-SR.jpg',
+    'assets/images/02_25 de Abril/02_1V2A6162-Aprimorado-SR.jpg',
+    'assets/images/02_25 de Abril/03_1V2A6465-Pano-Aprimorado-SR.jpg',
+    'assets/images/02_25 de Abril/04_1V2A6374-Pano-Editar-2-Aprimorado-SR.jpg',
+    'assets/images/02_25 de Abril/05_1V2A6063-Editar_ajustada-Aprimorado-SR.jpg',
+    'assets/images/02_25 de Abril/06_1V2A6470-Aprimorado-SR.jpg'
   ],
   [Projects.MIRANTE]: [
-    'assets/images/03_Mirante/00_1V2A5596-Panorノica HDR.jpg',
-    'assets/images/03_Mirante/01_1V2A5534-HDR.jpg',
-    'assets/images/03_Mirante/02_1V2A5580-Panorノica HDR.jpg',
-    'assets/images/03_Mirante/03_1V2A5707-Editar.jpg',
-    'assets/images/03_Mirante/04_1V2A5755.jpg'
+    'assets/images/03_Mirante/00_1V2A5596-Panorノica HDR-Aprimorado-SR.jpg',
+    'assets/images/03_Mirante/01_1V2A5534-HDR-Aprimorado-SR.jpg',
+    'assets/images/03_Mirante/02_1V2A5580-Panorノica HDR-Aprimorado-SR.jpg',
+    'assets/images/03_Mirante/03_1V2A5707-Editar-Aprimorado-SR.jpg',
+    'assets/images/03_Mirante/04_1V2A5755-Aprimorado-SR.jpg'
 
   ],
   [Projects.FREITAS_REIS]: [
-    'assets/images/04_Freitas Reis/00_1V2A0107-Pano.jpg',
-    'assets/images/04_Freitas Reis/01_1V2A0121-Pano.jpg',
-    'assets/images/04_Freitas Reis/02_IMG_9894_ajustada v3.jpg',
-    'assets/images/04_Freitas Reis/03_1V2A0194-Editar_pormenor 3_ajustada.jpg',
-    'assets/images/04_Freitas Reis/04_IMG_9891_ajustada v2.jpg'
+    'assets/images/04_Freitas Reis/00_1V2A0107-Pano-Aprimorado-SR.jpg',
+    'assets/images/04_Freitas Reis/01_1V2A0121-Pano-Aprimorado-SR.jpg',
+    'assets/images/04_Freitas Reis/02_IMG_9894_ajustada v3-Aprimorado-SR.jpg',
+    'assets/images/04_Freitas Reis/03_1V2A0194-Editar_pormenor 3_ajustada-Aprimorado-SR.jpg',
+    'assets/images/04_Freitas Reis/04_IMG_9891_ajustada v2-Aprimorado-SR.jpg'
   ],
   [Projects.INFANTE_SAGRES]: [
-    'assets/images/05_Infante Sagres/00_1V2A8029-Pano-Editar.jpg',
-    'assets/images/05_Infante Sagres/02_1V2A8036-Editar.jpg',
-    'assets/images/05_Infante Sagres/03_1V2A8081.jpg',
-    'assets/images/05_Infante Sagres/04_X_1V2A8072.jpg',
-    'assets/images/05_Infante Sagres/05_1V2A8293.jpg'
+    'assets/images/05_Infante Sagres/00_1V2A8029-Pano-Editar-Aprimorado-SR.jpg',
+    'assets/images/05_Infante Sagres/02_1V2A8036-Editar-Aprimorado-SR.jpg',
+    'assets/images/05_Infante Sagres/03_1V2A8081-Aprimorado-SR.jpg',
+    'assets/images/05_Infante Sagres/04_X_1V2A8072-Aprimorado-SR.jpg',
+    'assets/images/05_Infante Sagres/05_1V2A8293-Aprimorado-SR.jpg'
   ]
 }

@@ -9,9 +9,10 @@
 </ngb-carousel>
 
 <span class="project-name-slide">
-  {{selectedProject?.description}}
+  {{ selectedProject?.description }}
 </span>
 
 <span class="close-slideshow">
-  <mat-icon class="arrow-icon" (click)="closeSlideShow()">west</mat-icon>
+    <img id="openCloseIcon" src="assets/svg/arrow.svg"
+         class="arrow-icon" (click)="closeSlideShow()">
 </span>

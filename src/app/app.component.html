@@ -9,8 +9,8 @@
   <div *ngIf="!isPortrait">
     <header class="fixed-header">
       <div class="about-icon">
-        <mat-icon id="openCloseIcon" class="add-icon"
-                  (click)="openAbout()">add</mat-icon>
+        <img id="openCloseIcon" src="assets/svg/plus.svg"
+             class="add-icon" (click)="openAbout()">
       </div>
     </header>
     <router-outlet></router-outlet>
