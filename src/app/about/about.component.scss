@@ -3,10 +3,11 @@
   background-color: var(--background-beige);
   min-height: 100vh;
   min-width: 100vw;
+  z-index: 150;
 }
 
 .about-text {
-  font-family: 'ABCArizona';
+  font-family: 'Martina';
   width: 50%;
   font-size: 24px;
   font-weight: 550;

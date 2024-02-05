@@ -43,7 +43,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'ABCArizona';
+  font-family: 'Martina';
 }
 
 :host {
@@ -68,6 +68,13 @@ body {
 @font-face {
   font-family: 'ABCArizona';
   src: url('assets/fonts/ABC Arizona Text/ABCArizonaText-Regular-Trial.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Martina';
+  src: url('assets/fonts/Martina/martina-plantijn-regular.woff2') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -102,6 +109,7 @@ img {
 .about-on-top {
   top: 0;
   position: absolute;
+  z-index: 100;
 }
 
 .menniz-logo {
@@ -112,6 +120,7 @@ img {
   top: 0;
   left: 0;
   padding-top: 2px;
+  transform-origin: top left;
   transition: transform 0.1s;
 }
 
@@ -155,6 +164,15 @@ img {
 }
 
 .content.hidden {
-  display: none;
-  transition: 2s;
+  ::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+  overflow: hidden;
+  height: 50vh;
+  position: relative;
 }
