@@ -28,6 +28,6 @@ export class AboutComponent implements OnInit {
   }
 
   openMail(): void {
-    window.location.href = "mailto:info@menniz.com?subject=MENNIZ"
+    window.location.href = "mailto:info@menniz.pt?subject=MENNIZ"
   }
 }
