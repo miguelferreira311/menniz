@@ -172,7 +172,7 @@ img {
     right: 0;
     height: 50%;
   }
-  clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%); /* To hide the background pictures when the back scrolls up */
+  // clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); /* To hide the background pictures when the back scrolls up */
   overflow: hidden;
   height: 50vh;
   position: relative;
