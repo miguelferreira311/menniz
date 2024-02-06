@@ -9,13 +9,9 @@
 }
 
 .project-description {
-  font-family: 'Martina';
+  width: 50%;
   margin-top: auto;
   margin-bottom: 2rem;
-  font-size: 24px;
-  font-weight: 550;
-  color: var(--grey-letter);
-  line-height: 0.9;
 }
 
 .project-image {
@@ -25,4 +21,23 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.fixed-description {
+  font-family: 'Martina';
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 550;
+  color: var(--grey-letter);
+  line-height: 0.9;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fixed-description.active {
+  opacity: 1;
 }

@@ -1,16 +1,18 @@
 
 <div class="projects-container">
-  @for (item of projects; track item) {
+  @for (item of projects; track item; let index = $index) {
     <div [id]="'item_' + item.identifier" class="flex-container {{item.identifier == 1 ? 'project-item': ''}}">
 
-      <div [id]="'description_' + item.identifier" class="left project-description">
-        {{ item.description }}
-      </div>
+      <div [id]="'description_' + item.identifier" class="left project-description"></div>
 
       <img [id]="'image_' + item.identifier" class="right project-image"
            src="{{item.imageUrl}}" alt="{{item.name}}"
            width="780" loading="eager"
            (click)="selectProject(item)">
+    </div>
+
+    <div class="fixed-description" [class.active]="activeDescriptionIndex == index">
+      {{ item.description }}
     </div>
   }
 </div>
