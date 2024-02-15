@@ -17,13 +17,11 @@
         "deploy-ghpages": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/menniz/"
           }
         },
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/menniz/",
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",

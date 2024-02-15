@@ -14,6 +14,7 @@ import {AboutService} from "./services/about.service";
 })
 export class AppComponent {
   public isPortrait: boolean | undefined;
+  public isMobile: boolean | undefined;
   public readonly title: string = 'MENNIZ';
 
   @HostListener('window:resize', ['$event'])
@@ -27,7 +28,8 @@ export class AppComponent {
   }
 
   private _checkOrientation(): void {
-    this.isPortrait = this._isMobileDevice() && window.innerHeight > window.innerWidth;
+    this.isMobile = this._isMobileDevice();
+    this.isPortrait = this.isMobile && window.innerHeight > window.innerWidth;
   }
 
   private _isMobileDevice(): boolean {

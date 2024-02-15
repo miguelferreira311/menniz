@@ -1,20 +1,36 @@
-<div class="content" [class.hidden]="(aboutService.isVisible$ | async)">
-  <header class="fixed-header">
-    <img id="menniz-logo" class="menniz-logo" (click)="showVerticalSlideshow()"
-         ngSrc="assets/layout-images/menniz_black_no_background.png"
-         alt="MENNIZ" width="390" height="72" priority>
-  </header>
+@if(isMobile) {
+  <div class="content" [class.hidden]="(aboutService.isVisible$ | async)">
+    <header class="fixed-header">
+      <img id="mobile-menniz-logo" class="menniz-logo"
+           src="assets/layout-images/menniz_black_no_background.png"
+           alt="MENNIZ" width="156" height="29">
+    </header>
 
-  <div *ngIf="projectSelected && selectedProject; else verticalSlideshow">
-    <app-slideshow [selectedProject]="selectedProject"
-                   (onCloseShow)="showVerticalSlideshow()">
-    </app-slideshow>
+    <app-mobile-slideshow></app-mobile-slideshow>
   </div>
 
-  <ng-template #verticalSlideshow>
-    <app-vertical-slideshow (onProjectSelect)="showProject($event)">
-    </app-vertical-slideshow>
-  </ng-template>
-</div>
+  <app-about class="about-on-top"></app-about>
 
-<app-about class="about-on-top"></app-about>
+} @else {
+  <div class="content" [class.hidden]="(aboutService.isVisible$ | async)">
+    <header class="fixed-header">
+      <img id="menniz-logo" class="menniz-logo" (click)="showVerticalSlideshow()"
+           ngSrc="assets/layout-images/menniz_black_no_background.png"
+           alt="MENNIZ" width="390" height="72" priority>
+    </header>
+
+    <div *ngIf="projectSelected && selectedProject; else verticalSlideshow">
+      <app-slideshow [selectedProject]="selectedProject"
+                     (onCloseShow)="showVerticalSlideshow()">
+      </app-slideshow>
+    </div>
+
+    <ng-template #verticalSlideshow>
+      <app-vertical-slideshow (onProjectSelect)="showProject($event)">
+      </app-vertical-slideshow>
+    </ng-template>
+  </div>
+
+  <app-about class="about-on-top"></app-about>
+}
+

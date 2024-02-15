@@ -1,21 +1,28 @@
 <main class="main">
-  <div *ngIf="isPortrait" class="rotate-device">
-    <img class="m-b-2" src="assets/layout-images/menniz_white_no_background.png"
-         alt="MENNIZ" width="262" height="48">
-    <p>Please rotate your device for a better experience.</p>
-    <mat-icon class="rotate-icon">screen_rotation</mat-icon>
-  </div>
+  <!--  <div *ngIf="isPortrait" class="rotate-device">-->
+  <!--    <img class="m-b-2" src="assets/layout-images/menniz_white_no_background.png"-->
+  <!--         alt="MENNIZ" width="262" height="48">-->
+  <!--    <p>Please rotate your device for a better experience.</p>-->
+  <!--    <mat-icon class="rotate-icon">screen_rotation</mat-icon>-->
+  <!--  </div>-->
 
-  <div *ngIf="!isPortrait">
+  @if(isMobile) {
+    <header class="close-fixed-header">
+      <div class="about-icon">
+        <img id="openCloseIconMobile" src="assets/svg/smaller_plus.svg"
+             class="add-icon" (click)="openAbout()">
+      </div>
+    </header>
+
+  } @else {
     <header class="close-fixed-header">
       <div class="about-icon">
         <img id="openCloseIcon" src="assets/svg/plus.svg"
              class="add-icon" (click)="openAbout()">
       </div>
     </header>
-    <router-outlet></router-outlet>
-  </div>
+  }
+
+  <router-outlet></router-outlet>
 </main>
 
-
-<script src="test.js"></script>

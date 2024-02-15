@@ -25,12 +25,13 @@
 
 .fixed-description {
   font-family: 'Martina';
+  font-variant-numeric: oldstyle-nums;
   position: fixed;
   bottom: 0;
   width: 50%;
   margin-top: auto;
   margin-bottom: 2rem;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 550;
   color: var(--grey-letter);
   line-height: 0.9;

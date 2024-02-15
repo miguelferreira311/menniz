@@ -1,0 +1,13 @@
+<div class="mobile-container">
+  @for (item of projects; track item) {
+    <ngb-carousel #carousel class="img-wrapper">
+      @for (image of images[item.identifier]; track image) {
+        <ng-template ngbSlide>
+          <img #carouselImages class="img-mobile" [src]="image" loading="eager"/>
+        </ng-template>
+      }
+    </ngb-carousel>
+
+    <p class="mobile-description">{{ item?.description }}</p>
+  }
+</div>

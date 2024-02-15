@@ -21,7 +21,7 @@ ngb-carousel {
     .carousel-control-prev {
       padding-right: 3rem;
       &:hover {
-        cursor: url("../../assets/svg/chevron_left.svg") 30 30, auto;
+        cursor: url("../../assets/svg/arrow.svg") 100 100, auto;
       }
     }
     .carousel-control-next {
@@ -55,11 +55,12 @@ ngb-carousel {
 
 .project-name-slide {
   font-family: 'Martina';
+  font-variant-numeric: oldstyle-nums;
   position: absolute;
   bottom: 24px;
   left: 2rem;
   z-index: 99;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 550;
   color: var(--grey-letter);
 }
