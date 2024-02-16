@@ -1,39 +1,75 @@
 <div [@slideUpDownAnimation]="isVisible ? 'visible' : 'hidden'"
      class="flex-container about-background">
-  <div class="left about-text">
-    <img src="assets/images/About.jpg" alt="MENNIZ" width="900" class="m-b-1" loading="eager">
+  @if (isMobile) {
+    <div class="fake-header about-header"></div>
+    <div class="about-mobile-text">
+      <p class="m-b-0">MENNIZ is the natural result of a continuous dialogue between two disciplines: architecture and interior design.</p>
+      <p class="m-b-0 m-t-2">The atelier was founded by Mariana Menano and Gonçalo Diniz in 2019.
+        Their creative process and working methodology stem from a longstanding
+        relationship intertwined with successful, independent careers.</p>
+      <p class="m-b-0">Mariana and Gonçalo have a combined professional experience of over 20 years,
+        both in the United Kingdom and Portugal.</p>
 
-    <p class="m-b-0">MENNIZ is the natural result of a continuous dialogue between two disciplines: </p>
-    <p class="m-b-0">architecture and interior design.</p>
-    <p class="m-b-0 m-t-2">The atelier was founded by Mariana Menano and Gonçalo Diniz in 2019.</p>
-    <p class="m-b-0">Their creative process and working methodology stem from a longstanding
-      relationship intertwined with successful, independent careers.</p>
-    <p class="m-b-0">Mariana and Gonçalo have a combined professional experience of over 20 years,
-      both in the United Kingdom and Portugal.</p>
+      <p class="m-b-0 m-t-2">For Mariana, the work developed for leading brands within the hotel and restaurant
+        sectors was essential in setting her benchmark when delivering interior design projects.</p>
 
-    <p class="m-b-0 m-t-2">For Mariana, the work developed for leading brands within the hotel and restaurant
-      sectors was essential to set her benchmark when delivering interior design projects.</p>
+      <p class="m-b-0">For Gonçalo, the knowledge gathered from his involvement in all phases and types of
+        architectural projects, from public spaces and services to residential projects,
+        was fundamental in establishing his methodology and collaborative process.</p>
 
-    <p class="m-b-0">For Gonçalo, the knowledge gathered from being involved in all phases of architectural projects,
-      from public spaces and services to residential projects, was fundamental to establish his methodology
-      and collaborative process.</p>
+      <p class="m-b-0 m-t-2">Back in Lisbon, they both kept on progressing in their respective disciplines,
+        maturing on renewed approaches and design strategies that inevitably made them
+        begin to feel the need for something of their own.</p>
 
-    <p class="m-b-0 m-t-2">Back in Lisbon, they both kept on progressing in their respective disciplines, maturing on renewed
-      approaches and design strategies that inevitably made them begin to feel the
-      need for something of their own.</p>
+      <p class="m-b-0 m-t-2">MENNIZ is their new chapter in the process of blending architecture with interior design.
+        A multidisciplinary and collaborative atelier that firmly believes that
+        teamwork process is paramount to every project.</p>
+      <p class="m-b-0 m-t-2">This principle manifests itself by inviting and coordinating different
+        specialists including engineers, designers, craftsmen, and artists. All with the single purpose of pushing the
+        boundaries of clients' expectations and creating timeless spaces.</p>
 
-    <p class="m-b-0 m-t-2">MENNIZ is their new chapter in the process of blending architecture with interior
-      design. A multidisciplinary and collaborative atelier that firmly believes that teamwork
-      process is paramount to every project.</p>
-    <p class="m-b-0 m-t-2">This principle manifests itself by inviting and coordinating different specialists including
-      engineers, designers, craftsmen, and artists. All with the single purpose of pushing the boundaries of clients'
-      expectations and breed life into timeless spaces.</p>
+      <p class="m-b-0 m-t-2 email-menniz" (click)="openMail()">{{ 'info\@menniz.pt' }}</p>
+      <p class="m-b-0">+351 919 717 122</p>
+      <p class="m-b-0">+351 919 717 123</p>
+      <p class="m-b-0 small-text">© 2024 MENNIZ&emsp;All rights reserved</p>
+    </div>
 
-    <p class="m-b-0 m-t-2 email-menniz" (click)="openMail()">{{ 'info\@menniz.pt' }}</p>
-    <p class="m-b-0">+351 919 717 122</p>
-    <p class="m-b-0">+351 919 717 123</p>
-    <p class="m-b-0 small-text">© 2024 MENNIZ&emsp;All rights reserved</p>
-  </div>
+  } @else {
+    <div class="left about-text">
+      <img src="assets/images/About.jpg" alt="MENNIZ" width="900" class="m-b-1" loading="eager">
+
+      <p class="m-b-0">MENNIZ is the natural result of a continuous dialogue between two disciplines: </p>
+      <p class="m-b-0">architecture and interior design.</p>
+      <p class="m-b-0 m-t-2">The atelier was founded by Mariana Menano and Gonçalo Diniz in 2019.
+        Their creative process and working methodology stem from a longstanding
+        relationship intertwined with successful, independent careers.</p>
+      <p class="m-b-0">Mariana and Gonçalo have a combined professional experience of over 20 years,
+        both in the United Kingdom and Portugal.</p>
+
+      <p class="m-b-0 m-t-2">For Mariana, the work developed for leading brands within the hotel and restaurant
+        sectors was essential in setting her benchmark when delivering interior design projects.</p>
+
+      <p class="m-b-0">For Gonçalo, the knowledge gathered from his involvement in all phases and types of
+        architectural projects, from public spaces and services to residential projects,
+        was fundamental in establishing his methodology and collaborative process.</p>
+
+      <p class="m-b-0 m-t-2">Back in Lisbon, they both kept on progressing in their respective disciplines,
+        maturing on renewed approaches and design strategies that inevitably made them
+        begin to feel the need for something of their own.</p>
+
+      <p class="m-b-0 m-t-2">MENNIZ is their new chapter in the process of blending architecture with interior design.
+        A multidisciplinary and collaborative atelier that firmly believes that
+        teamwork process is paramount to every project.</p>
+      <p class="m-b-0 m-t-2">This principle manifests itself by inviting and coordinating different
+        specialists including engineers, designers, craftsmen, and artists. All with the single purpose of pushing the
+        boundaries of clients' expectations and creating timeless spaces.</p>
+
+      <p class="m-b-0 m-t-2 email-menniz" (click)="openMail()">{{ 'info\@menniz.pt' }}</p>
+      <p class="m-b-0">+351 919 717 122</p>
+      <p class="m-b-0">+351 919 717 123</p>
+      <p class="m-b-0 small-text">© 2024 MENNIZ&emsp;All rights reserved</p>
+    </div>
+  }
 </div>
 
 <!--

@@ -9,6 +9,7 @@ import {AboutService} from "../services/about.service";
 import {AboutComponent} from "../about/about.component";
 import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
 import {MobileSlideshowComponent} from "../mobile-slideshow/mobile-slideshow.component";
+import {UtilitiesService} from "../services/utilities.service";
 
 @Component({
   selector: 'app-home',
@@ -34,7 +35,7 @@ export class HomeComponent {
   public selectedProject: ProjectItem | undefined;
 
   constructor(public aboutService: AboutService) {
-    this.isMobile = this._isMobileDevice();
+    this.isMobile = UtilitiesService.isMobileDevice();
   }
 
   showProject(event: ProjectItem) {
@@ -55,10 +56,5 @@ export class HomeComponent {
     element.classList.remove('shortened-element');
     // @ts-ignore
     element.className = 'menniz-logo';
-  }
-
-  private _isMobileDevice(): boolean {
-    const userAgent: string = navigator.userAgent;
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   }
 }

@@ -21,7 +21,7 @@ export class MobileSlideshowComponent {
 
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-    config.interval = 20000;
+    config.interval = 0;
     config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = true;

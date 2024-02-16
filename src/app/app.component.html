@@ -1,16 +1,12 @@
 <main class="main">
-  <!--  <div *ngIf="isPortrait" class="rotate-device">-->
-  <!--    <img class="m-b-2" src="assets/layout-images/menniz_white_no_background.png"-->
-  <!--         alt="MENNIZ" width="262" height="48">-->
-  <!--    <p>Please rotate your device for a better experience.</p>-->
-  <!--    <mat-icon class="rotate-icon">screen_rotation</mat-icon>-->
-  <!--  </div>-->
-
   @if(isMobile) {
-    <header class="close-fixed-header">
-      <div class="about-icon">
+    <header id="mobileHeader" class="close-fixed-header">
+      <img id="mobile-menniz-logo" class="menniz-logo-mobile"
+           src="assets/layout-images/menniz_black_no_background.png"
+           alt="MENNIZ" width="156" height="29">
+      <div class="about-icon-mobile">
         <img id="openCloseIconMobile" src="assets/svg/smaller_plus.svg"
-             class="add-icon" (click)="openAbout()">
+             class="add-icon-mobile" (click)="openAbout()">
       </div>
     </header>
 

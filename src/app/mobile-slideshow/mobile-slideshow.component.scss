@@ -1,6 +1,5 @@
 .mobile-container {
-  margin: 0 24px 24px 24px;
-  padding-top: 100px;
+  margin: 0 24px 0 24px;
   padding-bottom: 1px;
 }
 
@@ -12,10 +11,14 @@
   color: var(--grey-letter);
   margin-top: 1rem;
   margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
 }
 
 .img-mobile {
-
+  // TODO:
 }
 
 .img-wrapper {

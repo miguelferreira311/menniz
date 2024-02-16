@@ -49,7 +49,17 @@ export class AppComponent {
   }
 
   rotateIcon() {
-    const element = document.getElementById('openCloseIcon');
+    let element;
+    if (this.isMobile) {
+      element = document.getElementById('openCloseIconMobile');
+      // @ts-ignore
+      element.classList.remove('add-icon-mobile');
+      // @ts-ignore
+      element.classList.add('rotate-about-mobile');
+      return;
+    }
+
+    element = document.getElementById('openCloseIcon');
     // @ts-ignore
     element.classList.remove('add-icon');
     // @ts-ignore
@@ -57,7 +67,17 @@ export class AppComponent {
   }
 
   revertIcon() {
-    const element = document.getElementById('openCloseIcon');
+    let element;
+    if (this.isMobile) {
+      element = document.getElementById('openCloseIconMobile');
+      // @ts-ignore
+      element.classList.remove('rotate-about-mobile');
+      // @ts-ignore
+      element.classList.add('add-icon-mobile');
+      return;
+    }
+
+    element = document.getElementById('openCloseIcon');
     // @ts-ignore
     element.classList.remove('rotate-about');
     // @ts-ignore

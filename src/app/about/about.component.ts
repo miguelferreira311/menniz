@@ -3,6 +3,7 @@ import {FormsModule} from "@angular/forms";
 import {AsyncPipe, NgOptimizedImage} from "@angular/common";
 import {slideUpDownAnimation} from "../animations";
 import {AboutService} from "../services/about.service";
+import {UtilitiesService} from "../services/utilities.service";
 
 @Component({
   selector: 'app-about',
@@ -17,9 +18,12 @@ import {AboutService} from "../services/about.service";
   animations: [slideUpDownAnimation],
 })
 export class AboutComponent implements OnInit {
-  isVisible: boolean = false;
+  public isVisible: boolean = false;
+  public isMobile: boolean = false;
 
-  constructor(public aboutService: AboutService) {}
+  constructor(public aboutService: AboutService) {
+    this.isMobile = UtilitiesService.isMobileDevice();
+  }
 
   ngOnInit() {
     this.aboutService.isVisible$.subscribe((visible: boolean) => {

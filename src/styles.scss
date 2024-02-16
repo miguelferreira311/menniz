@@ -107,9 +107,28 @@ img {
   z-index: 99;
 }
 
+.fake-header {
+  height: 90px;
+}
+
+.mobile-header {
+  height: 90px;
+  background: var(--background-light);
+}
+
 .about-on-top {
   top: 0;
   position: absolute;
+  z-index: 100;
+}
+
+.menniz-logo-mobile {
+  cursor: pointer;
+  margin-left: 21px;
+  margin-top: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 100;
 }
 
@@ -125,6 +144,15 @@ img {
   transition: transform 0.6s;
 }
 
+.about-icon-mobile {
+  margin-top: 18px !important;
+  margin-right: 18px !important;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .about-icon {
   margin-top: 24px !important;
   margin-right: 24px !important;
@@ -132,6 +160,24 @@ img {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.add-icon-mobile {
+  height: 35px !important;
+  width: 35px !important;
+  font-size: 35px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.rotate-about-mobile {
+  position: sticky;
+  height: 35px !important;
+  width: 35px !important;
+  font-size: 35px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  transition: transform 1s;
 }
 
 .add-icon {
