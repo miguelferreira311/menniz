@@ -1,13 +1,16 @@
 <div class="mobile-header fixed-header"></div>
 <div class="mobile-container">
   @for (item of projects; track item) {
-    <ngb-carousel #carousel class="img-wrapper">
-      @for (image of images[item.identifier]; track image) {
-        <ng-template ngbSlide>
-          <img #carouselImages height="250" [src]="image" loading="eager"/>
-        </ng-template>
-      }
-    </ngb-carousel>
+    <div (touchstart)="posIni = $event.changedTouches[0].pageX"
+         (touchend)="move($event.changedTouches[0].pageX)">
+      <ngb-carousel #carousel class="img-wrapper">
+        @for (image of images[item.identifier]; track image) {
+          <ng-template ngbSlide>
+            <img #carouselImages height="250" [src]="image" loading="eager"/>
+          </ng-template>
+        }
+      </ngb-carousel>
+    </div>
 
     <p class="mobile-description">{{ item?.description }}</p>
   }

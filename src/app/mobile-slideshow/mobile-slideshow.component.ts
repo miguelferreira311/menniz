@@ -18,6 +18,7 @@ export class MobileSlideshowComponent {
 
   @ViewChildren('carouselImages') carouselImages: QueryList<ElementRef> | undefined;
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel | undefined;
+  public posIni: number | undefined;
 
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
@@ -27,5 +28,17 @@ export class MobileSlideshowComponent {
     config.pauseOnHover = true;
     config.pauseOnFocus = true;
     config.showNavigationIndicators = false;
+  }
+
+  protected move(pos: number) {
+    // @ts-ignore
+    const offset: number = this.posIni - pos;
+    if (offset < -100) { // @ts-ignore
+      this.carousel.prev()
+    }
+
+    if (offset > 100) { // @ts-ignore
+      this.carousel.next();
+    }
   }
 }
