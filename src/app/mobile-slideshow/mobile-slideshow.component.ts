@@ -17,7 +17,7 @@ export class MobileSlideshowComponent {
   public images = IMAGES_BY_PROJECT;
 
   @ViewChildren('carouselImages') carouselImages: QueryList<ElementRef> | undefined;
-  @ViewChild('carousel', { static: true }) carousel: NgbCarousel | undefined;
+  @ViewChildren(NgbCarousel) carousels: QueryList<NgbCarousel> | undefined;
   public posIni: number | undefined;
 
   constructor(config: NgbCarouselConfig) {
@@ -39,6 +39,16 @@ export class MobileSlideshowComponent {
 
     if (offset > 100) { // @ts-ignore
       this.carousel.next();
+    }
+  }
+
+  protected handleSwipe(direction: string, index: number): void {
+    // @ts-ignore
+    const carousel: NgbCarousel = this.carousels.toArray()[index];
+    if (direction === 'right') {
+      carousel.prev();
+    } else if (direction === 'left') {
+      carousel.next();
     }
   }
 }
