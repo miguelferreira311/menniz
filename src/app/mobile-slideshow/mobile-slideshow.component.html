@@ -4,7 +4,7 @@
     <ngb-carousel #carousel class="img-wrapper">
       @for (image of images[item.identifier]; track image) {
         <ng-template ngbSlide>
-          <img #carouselImages class="img-mobile" [src]="image" loading="eager"/>
+          <img #carouselImages height="250" [src]="image" loading="eager"/>
         </ng-template>
       }
     </ngb-carousel>
