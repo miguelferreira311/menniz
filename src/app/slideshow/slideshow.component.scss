@@ -21,13 +21,13 @@ ngb-carousel {
     .carousel-control-prev {
       padding-right: 3rem;
       &:hover {
-        cursor: url("../../assets/svg/chevron_left.svg") 30 30, auto;
+        cursor: url("../../assets/svg/arrow left v.03.svg") 30 30, auto;
       }
     }
     .carousel-control-next {
       padding-left: 3rem;
       &:hover {
-        cursor: url("../../assets/svg/chevron_right.svg") 30 30, auto;
+        cursor: url("../../assets/svg/arrow right v.03.svg") 30 30, auto;
       }
     }
   }
