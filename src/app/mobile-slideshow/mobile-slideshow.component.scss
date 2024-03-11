@@ -10,7 +10,7 @@
   font-weight: 600;
   color: var(--grey-letter);
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 24px;
@@ -28,4 +28,21 @@
       width: 30%;
     }
   }
+  ngb-carousel {
+    text-align: center;
+
+    ::ng-deep .carousel-inner {
+      height: 564px;
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.mobile-hr {
+  margin: 0;
+  color: var(--grey-letter);
+  opacity: 0.5;
 }

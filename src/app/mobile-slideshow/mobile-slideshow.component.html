@@ -1,15 +1,16 @@
 <div class="mobile-header fixed-header"></div>
 <div class="mobile-container">
   @for (item of projects; track item; let i = $index) {
-      <ngb-carousel class="img-wrapper"
-                    (swipeleft)="handleSwipe('left', i)"
-                    (swiperight)="handleSwipe('right', i)">
-        @for (image of images[item.identifier]; track image) {
-          <ng-template ngbSlide>
-            <img #carouselImages height="250" [src]="image" loading="eager"/>
-          </ng-template>
-        }
-      </ngb-carousel>
+    <hr class="mobile-hr"/>
+    <ngb-carousel class="img-wrapper"
+                  (swipeleft)="handleSwipe('left', i)"
+                  (swiperight)="handleSwipe('right', i)">
+      @for (image of images[item.identifier]; track image) {
+        <ng-template ngbSlide>
+          <img #carouselImages [src]="image" loading="eager"/>
+        </ng-template>
+      }
+    </ngb-carousel>
 
     <p class="mobile-description">{{ item?.description }}</p>
   }

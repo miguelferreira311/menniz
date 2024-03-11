@@ -28,6 +28,7 @@ export class MobileSlideshowComponent {
     config.pauseOnHover = true;
     config.pauseOnFocus = true;
     config.showNavigationIndicators = false;
+    config.animation = false;
   }
 
   protected move(pos: number) {
