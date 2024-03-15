@@ -52,6 +52,18 @@ ngb-carousel {
   height: 50px;
 }
 
+.close-slideshow .hover-svg {
+  display: none;
+}
+
+.close-slideshow:hover .hover-svg {
+  display: inline-block;
+}
+
+.close-slideshow:hover .original-svg {
+  display: none;
+}
+
 .project-name-slide {
   font-family: 'Martina';
   font-variant-numeric: oldstyle-nums;
@@ -59,7 +71,7 @@ ngb-carousel {
   bottom: 24px;
   left: 2rem;
   z-index: 99;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 550;
   color: var(--grey-letter);
 }

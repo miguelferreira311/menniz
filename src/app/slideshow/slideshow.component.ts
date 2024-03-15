@@ -65,4 +65,12 @@ export class SlideshowComponent implements OnInit {
   closeSlideShow() {
     this.onCloseShow.emit(true);
   }
+
+  onhover(element: any) {
+    element.setAttribute('src', 'assets/svg/arrow%20left%20v.03.svg');
+  }
+
+  unhover(element: any) {
+    element.setAttribute('src', 'assets/svg/arrow%20v.02.svg');
+  }
 }
