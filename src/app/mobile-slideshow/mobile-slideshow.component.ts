@@ -18,7 +18,7 @@ export class MobileSlideshowComponent {
 
   @ViewChildren('carouselImages') carouselImages: QueryList<ElementRef> | undefined;
   @ViewChildren(NgbCarousel) carousels: QueryList<NgbCarousel> | undefined;
-  public posIni: number | undefined;
+  public initialPosition: number | undefined;
 
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
@@ -31,24 +31,16 @@ export class MobileSlideshowComponent {
     config.animation = false;
   }
 
-  protected move(pos: number) {
+  protected move(finalPosition: number, index: number) {
     // @ts-ignore
-    const offset: number = this.posIni - pos;
+    const carousel: NgbCarousel = this.carousels.toArray()[index];
+    // @ts-ignore
+    const offset: number = this.initialPosition - finalPosition;
     if (offset < -100) { // @ts-ignore
-      this.carousel.prev()
+      carousel.prev()
     }
 
     if (offset > 100) { // @ts-ignore
-      this.carousel.next();
-    }
-  }
-
-  protected handleSwipe(direction: string, index: number): void {
-    // @ts-ignore
-    const carousel: NgbCarousel = this.carousels.toArray()[index];
-    if (direction === 'right') {
-      carousel.prev();
-    } else if (direction === 'left') {
       carousel.next();
     }
   }
