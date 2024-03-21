@@ -31,6 +31,7 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "undici": ">=5.28.3",
+    "vite": ">=4.5.2",
     "webpack-dev-middleware": ">=6.1.2",
     "zone.js": "~0.14.2"
   },
@@ -47,6 +48,7 @@
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "6.19.0",
     "@typescript-eslint/parser": "6.19.0",
+    "axios": ">=0.28.0",
     "eslint": "^8.56.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -54,6 +56,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "undici": ">=5.28.3",
+    "webpack-dev-middleware": ">=6.1.2"
   }
 }
