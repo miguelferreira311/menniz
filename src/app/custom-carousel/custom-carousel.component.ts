@@ -3,6 +3,7 @@ import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ProjectItem} from "../vertical-slideshow/projects-config";
 import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
+import {slideNextPrevAnimation} from "../animations";
 
 @Component({
   selector: 'app-custom-carousel',
@@ -14,18 +15,7 @@ import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
   ],
   templateUrl: './custom-carousel.component.html',
   styleUrl: './custom-carousel.component.scss',
-  animations: [
-    trigger('slideAnimation', [
-      state('void', style({position: 'absolute', width: '100%'})),
-      transition(':enter', [
-        style({transform: '{{ enterTransform }}'}),
-        animate('0.2s ease-in-out', style({transform: 'translateX(0%)'})),
-      ], {params: {enterTransform: 'translateX(100%)'}}),
-      transition(':leave', [
-        animate('0.2s ease-in-out', style({transform: '{{ leaveTransform }}'})),
-      ], {params: {leaveTransform: 'translateX(-100%)'}}),
-    ]),
-  ],
+  animations: [slideNextPrevAnimation]
 })
 export class CustomCarouselComponent implements OnInit {
   @Input() project!: ProjectItem;
