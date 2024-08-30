@@ -1,0 +1,19 @@
+@if (project) {
+  <div class="carousel"
+       (touchstart)="initialPosition = $event.changedTouches[0].pageX"
+       (touchend)="move($event.changedTouches[0].pageX)">
+    <div class="carousel-inner">
+      @for (slide of slides; track slide; let i = $index) {
+        <div [ngClass]="{ active: i === currentSlide }"
+             *ngIf="i === currentSlide"
+             [@slideAnimation]="slideHelper()"
+             class="carousel-item">
+          <img class="inner-image" [src]="slide"/>
+        </div>
+      }
+    </div>
+
+    <button class="prev" (click)="previousSlide()"></button>
+    <button class="next" (click)="nextSlide()"></button>
+  </div>
+}

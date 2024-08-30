@@ -2,17 +2,7 @@
 <div class="mobile-container">
   @for (item of projects; track item; let i = $index) {
     <hr class="mobile-hr"/>
-    <div (touchstart)="initialPosition = $event.changedTouches[0].pageX"
-         (touchend)="move($event.changedTouches[0].pageX, i)">
-      <ngb-carousel class="img-wrapper">
-        @for (image of images[item.identifier]; track image) {
-          <ng-template ngbSlide>
-            <img #carouselImages [src]="image" loading="eager"/>
-          </ng-template>
-        }
-      </ngb-carousel>
-    </div>
-
+    <app-custom-carousel [project]="item"></app-custom-carousel>
     <p class="mobile-description">{{ item?.description }}</p>
   }
 </div>

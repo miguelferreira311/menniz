@@ -1,0 +1,59 @@
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  transition: opacity 0.5s ease-in-out;
+  max-width: 100vw;
+  height: calc(100vw - 42px);
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inner-image {
+  text-align: center;
+  max-width: 100vw;
+  max-height: calc(100vw - 42px);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev {
+  left: 5px;
+  width: 40vw;
+  height: 100%;
+  opacity: 0;
+}
+
+.next {
+  right: 5px;
+  width: 40vw;
+  height: 100%;
+  opacity: 0;
+}

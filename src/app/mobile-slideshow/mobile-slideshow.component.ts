@@ -4,11 +4,12 @@ import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
 import {NgbCarousel, NgbCarouselConfig, NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {MatIconModule} from "@angular/material/icon";
 import {NgOptimizedImage} from "@angular/common";
+import {CustomCarouselComponent} from "../custom-carousel/custom-carousel.component";
 
 @Component({
   selector: 'app-mobile-slideshow',
   standalone: true,
-  imports: [NgbCarouselModule, MatIconModule, NgOptimizedImage],
+  imports: [NgbCarouselModule, MatIconModule, NgOptimizedImage, CustomCarouselComponent],
   templateUrl: './mobile-slideshow.component.html',
   styleUrl: './mobile-slideshow.component.scss'
 })
