@@ -15,6 +15,14 @@ export const IMAGES_BY_PROJECT = {
     'assets/images/01_João Branco/10_Photoshoot 1V2A5987-HDR_versao cortada.jpg',
     'assets/images/01_João Branco/11_Drone (2).jpg',
   ],
+  [Projects.MIRANTE]: [
+    'assets/images/03_Mirante/00_1V2A5596-Panorノica HDR.jpg',
+    'assets/images/03_Mirante/01_1V2A5534-HDR.jpg',
+    'assets/images/03_Mirante/02_1V2A5580-Panorノica HDR.jpg',
+    'assets/images/03_Mirante/03_1V2A5707-Editar.jpg',
+    'assets/images/03_Mirante/04_1V2A5755.jpg'
+
+  ],
   [Projects.ABRIL_25]: [
     'assets/images/02_25 de Abril/00_1V2A6224_retocada.jpg',
     'assets/images/02_25 de Abril/1V2A6146-Aprimorado-NR-Editar-Editar.jpg',
@@ -23,13 +31,10 @@ export const IMAGES_BY_PROJECT = {
     'assets/images/02_25 de Abril/05_1V2A6063-Editar_ajustada-Editar.jpg',
     'assets/images/02_25 de Abril/06_1V2A6470.jpg'
   ],
-  [Projects.MIRANTE]: [
-    'assets/images/03_Mirante/00_1V2A5596-Panorノica HDR.jpg',
-    'assets/images/03_Mirante/01_1V2A5534-HDR.jpg',
-    'assets/images/03_Mirante/02_1V2A5580-Panorノica HDR.jpg',
-    'assets/images/03_Mirante/03_1V2A5707-Editar.jpg',
-    'assets/images/03_Mirante/04_1V2A5755.jpg'
-
+  [Projects.JOAO_INFANTE]: [
+    'assets/images/04_Joao_Infante/1_nuno almendra-6_REVB.jpg',
+    'assets/images/04_Joao_Infante/2_nuno almendra-21.jpg',
+    'assets/images/04_Joao_Infante/3_nuno almendra-37.jpg',
   ],
   [Projects.FREITAS_REIS]: [
     'assets/images/04_Freitas Reis/00_1V2A0107-Pano-Aprimorado-SR.jpg',
