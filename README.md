@@ -40,3 +40,11 @@ move all the content inside the folder './docs/browser' to the folder './docs'
 3.``
 git add . && git commit -m 'Your commit message.' && git push
 ``
+
+4.``
+Login CPanel >> FTP Accounts >> mennizpt [Configure FTP Client]
+``
+
+5.``
+Login Cyberduck >> public_html >> Replace with /docs content
+``
