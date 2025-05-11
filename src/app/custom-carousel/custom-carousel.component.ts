@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgClass, NgForOf, NgIf} from "@angular/common";
-import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ProjectItem} from "../vertical-slideshow/projects-config";
 import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
 import {slideNextPrevAnimation} from "../animations";
