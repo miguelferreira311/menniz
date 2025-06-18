@@ -5,7 +5,7 @@
 
       <div [id]="'description_' + item.identifier" class="left project-description"></div>
 
-      <img [id]="'image_' + item.identifier" class="right project-image"
+      <img [id]="'image_' + item.identifier" class="right project-image {{item.identifier == 1 ? 'first-image': ''}}"
            src="{{item.imageUrl}}" alt="{{item.name}}"
            width="780" loading="eager"
            (click)="selectProject(item)">

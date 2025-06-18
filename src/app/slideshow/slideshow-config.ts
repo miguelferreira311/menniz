@@ -1,6 +1,21 @@
 import {Projects} from "../constants-types";
 
 export const IMAGES_BY_PROJECT = {
+  [Projects.BIARRITZ]: [
+    'assets/images/00_Biarritz/1.jpg',
+    'assets/images/00_Biarritz/2.jpg',
+    'assets/images/00_Biarritz/3.jpg',
+    'assets/images/00_Biarritz/4.jpg',
+    'assets/images/00_Biarritz/5.jpg',
+    'assets/images/00_Biarritz/6.jpg',
+    'assets/images/00_Biarritz/7.jpg',
+    'assets/images/00_Biarritz/8.jpg',
+    'assets/images/00_Biarritz/9.jpg',
+    'assets/images/00_Biarritz/10.jpg',
+    'assets/images/00_Biarritz/11.jpg',
+    'assets/images/00_Biarritz/12.jpg',
+    'assets/images/00_Biarritz/13.jpg',
+  ],
   [Projects.JOAO_BRANCO]: [
     'assets/images/01_João Branco/00_Photoshoot (21).jpg',
     'assets/images/01_João Branco/01_Photoshoot (4).jpg',
@@ -24,12 +39,17 @@ export const IMAGES_BY_PROJECT = {
 
   ],
   [Projects.ABRIL_25]: [
-    'assets/images/02_25 de Abril/00_1V2A6224_retocada.jpg',
-    'assets/images/02_25 de Abril/1V2A6146-Aprimorado-NR-Editar-Editar.jpg',
-    'assets/images/02_25 de Abril/03_1V2A6465-Pano-200DPI.jpg',
-    'assets/images/02_25 de Abril/04_1V2A6374-Pano-Editar-2.jpg',
-    'assets/images/02_25 de Abril/05_1V2A6063-Editar_ajustada-Editar.jpg',
-    'assets/images/02_25 de Abril/06_1V2A6470.jpg'
+    'assets/images/02_25 de Abril/25 Abril (1).jpg',
+    'assets/images/02_25 de Abril/25 Abril (1).jpg',
+    'assets/images/02_25 de Abril/25 Abril (2).jpg',
+    'assets/images/02_25 de Abril/25 Abril (3).jpg',
+    'assets/images/02_25 de Abril/25 Abril (4).jpg',
+    'assets/images/02_25 de Abril/25 Abril (5).jpg',
+    'assets/images/02_25 de Abril/25 Abril (6).jpg',
+    'assets/images/02_25 de Abril/25 Abril (7).jpg',
+    'assets/images/02_25 de Abril/25 Abril (8).jpg',
+    'assets/images/02_25 de Abril/25 Abril (9).jpg',
+    'assets/images/02_25 de Abril/25 Abril (10).jpg',
   ],
   [Projects.JOAO_INFANTE]: [
     'assets/images/04_Joao_Infante/1_nuno almendra-6_REVB.jpg',
