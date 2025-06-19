@@ -1,10 +1,11 @@
-import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
 import {ProjectItem, PROJECTS} from "../vertical-slideshow/projects-config";
 import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
 import {NgbCarousel, NgbCarouselConfig, NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {MatIconModule} from "@angular/material/icon";
 import {NgOptimizedImage} from "@angular/common";
 import {CustomCarouselComponent} from "../custom-carousel/custom-carousel.component";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-mobile-slideshow',
@@ -13,15 +14,17 @@ import {CustomCarouselComponent} from "../custom-carousel/custom-carousel.compon
   templateUrl: './mobile-slideshow.component.html',
   styleUrl: './mobile-slideshow.component.scss'
 })
-export class MobileSlideshowComponent {
+export class MobileSlideshowComponent implements AfterViewInit {
   protected readonly projects: ProjectItem[] = PROJECTS;
-  public images = IMAGES_BY_PROJECT;
 
   @ViewChildren('carouselImages') carouselImages: QueryList<ElementRef> | undefined;
   @ViewChildren(NgbCarousel) carousels: QueryList<NgbCarousel> | undefined;
   public initialPosition: number | undefined;
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(
+    config: NgbCarouselConfig,
+    private _route: ActivatedRoute,
+  ) {
     // customize default values of carousels used by this component tree
     config.interval = 0;
     config.wrap = true;
@@ -30,6 +33,22 @@ export class MobileSlideshowComponent {
     config.pauseOnFocus = true;
     config.showNavigationIndicators = false;
     config.animation = false;
+  }
+
+  ngAfterViewInit() {
+    if (window.location.href.includes('?project')) {
+      this._redirectToProject();
+    }
+  }
+
+  private _redirectToProject() {
+    const queryParams = this._route.snapshot.queryParams;
+    if (!queryParams || !queryParams['project']) return;
+
+    const projectToGo = this.projects.find((element => element.identifier.toString() === queryParams['project'].toString()))
+    if (!projectToGo) return;
+
+    setTimeout(() => this._scrollToElement('item_' + projectToGo.identifier), 1000);
   }
 
   protected move(finalPosition: number, index: number) {
@@ -43,6 +62,15 @@ export class MobileSlideshowComponent {
 
     if (offset > 100) { // @ts-ignore
       carousel.next();
+    }
+  }
+
+  private _scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId);
+    let container = document.querySelector('.mobile-container') as HTMLElement;
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top - 92; // 92px padding
+      container.scrollTo({top: elementPosition, behavior: 'smooth'});
     }
   }
 }

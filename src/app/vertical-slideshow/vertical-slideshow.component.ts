@@ -1,6 +1,9 @@
-import {Component, ElementRef, EventEmitter, HostListener, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 import {ProjectItem, PROJECTS} from "./projects-config";
 import {NgOptimizedImage} from "@angular/common";
+import {ActivatedRoute} from "@angular/router";
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-vertical-slideshow',
@@ -11,7 +14,7 @@ import {NgOptimizedImage} from "@angular/common";
   templateUrl: './vertical-slideshow.component.html',
   styleUrl: './vertical-slideshow.component.scss'
 })
-export class VerticalSlideshowComponent {
+export class VerticalSlideshowComponent implements OnInit {
   @Output() public onProjectSelect: EventEmitter<ProjectItem> = new EventEmitter();
   public projects: ProjectItem[] = PROJECTS;
   public activeDescriptionIndex: number = 0;
@@ -21,11 +24,34 @@ export class VerticalSlideshowComponent {
     this._changeVisibleDescription();
   }
 
-  constructor(private el: ElementRef) {
+  constructor(
+    private el: ElementRef,
+    private location: Location,
+    private _route: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    if (window.location.href.includes('?project')) {
+      this._redirectToProject();
+    }
+  }
+
+  private _redirectToProject() {
+    const queryParams = this._route.snapshot.queryParams;
+    if(!queryParams || !queryParams['project']) return;
+
+    const projectToGo = this.projects.find((element => element.identifier.toString() === queryParams['project'].toString()))
+    if(!projectToGo) return;
+
+    console.log('VOU EMITIR EVENTO!', queryParams);
+    setTimeout(() => {
+      this.onProjectSelect.emit(projectToGo);
+    }, 10);
   }
 
   public selectProject(project: ProjectItem): void {
     this.onProjectSelect.emit(project);
+    this.location.replaceState(window.location.pathname + `?project=${project.identifier}`);
   }
 
   private _changeVisibleDescription(): void {

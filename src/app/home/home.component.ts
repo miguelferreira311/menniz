@@ -3,11 +3,10 @@ import {FormsModule} from "@angular/forms";
 import {SlideshowComponent} from "../slideshow/slideshow.component";
 import {VerticalSlideshowComponent} from "../vertical-slideshow/vertical-slideshow.component";
 import {AsyncPipe, NgIf, NgOptimizedImage} from "@angular/common";
-import {ProjectItem, PROJECTS} from "../vertical-slideshow/projects-config";
+import {ProjectItem} from "../vertical-slideshow/projects-config";
 import {MatIconModule} from "@angular/material/icon";
 import {AboutService} from "../services/about.service";
 import {AboutComponent} from "../about/about.component";
-import {IMAGES_BY_PROJECT} from "../slideshow/slideshow-config";
 import {MobileSlideshowComponent} from "../mobile-slideshow/mobile-slideshow.component";
 import {UtilitiesService} from "../services/utilities.service";
 

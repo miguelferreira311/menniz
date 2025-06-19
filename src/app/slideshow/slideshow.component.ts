@@ -13,7 +13,7 @@ import {
 import {IMAGES_BY_PROJECT} from "./slideshow-config";
 import {NgbCarousel, NgbCarouselConfig, NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {MatIconModule} from "@angular/material/icon";
-import {NgOptimizedImage} from "@angular/common";
+import {Location, NgOptimizedImage} from "@angular/common";
 import {ProjectItem} from "../vertical-slideshow/projects-config";
 
 // https://github.com/MurhafSousli/ngx-gallery/wiki
@@ -35,7 +35,7 @@ export class SlideshowComponent implements OnInit {
   @ViewChildren('carouselImages') carouselImages: QueryList<ElementRef> | undefined;
   @ViewChild('carousel', {static: true}) carousel: NgbCarousel | undefined;
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig, private location: Location) {
     // customize default values of carousels used by this component tree
     config.interval = 20000;
     config.wrap = true;
@@ -63,6 +63,7 @@ export class SlideshowComponent implements OnInit {
   }
 
   closeSlideShow() {
+    this.location.replaceState(window.location.pathname);
     this.onCloseShow.emit(true);
   }
 

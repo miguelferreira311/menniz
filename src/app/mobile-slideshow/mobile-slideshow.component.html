@@ -1,7 +1,7 @@
 <div class="mobile-header fixed-header"></div>
 <div class="mobile-container">
   @for (item of projects; track item; let i = $index) {
-    <hr class="mobile-hr"/>
+    <hr [id]="'item_' + item.identifier" class="mobile-hr"/>
     <app-custom-carousel [project]="item"></app-custom-carousel>
     <p class="mobile-description">{{ item?.description }}</p>
   }
