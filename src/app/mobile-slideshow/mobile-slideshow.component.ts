@@ -45,7 +45,7 @@ export class MobileSlideshowComponent implements AfterViewInit {
     const queryParams = this._route.snapshot.queryParams;
     if (!queryParams || !queryParams['project']) return;
 
-    const projectToGo = this.projects.find((element => element.identifier.toString() === queryParams['project'].toString()))
+    const projectToGo = this.projects.find((element => element.name.toString() === queryParams['project'].toString()))
     if (!projectToGo) return;
 
     setTimeout(() => this._scrollToElement('item_' + projectToGo.identifier), 1000);

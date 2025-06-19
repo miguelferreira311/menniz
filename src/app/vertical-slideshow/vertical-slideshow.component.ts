@@ -40,7 +40,7 @@ export class VerticalSlideshowComponent implements OnInit {
     const queryParams = this._route.snapshot.queryParams;
     if(!queryParams || !queryParams['project']) return;
 
-    const projectToGo = this.projects.find((element => element.identifier.toString() === queryParams['project'].toString()))
+    const projectToGo = this.projects.find((element => element.name.toString() === queryParams['project'].toString()))
     if(!projectToGo) return;
 
     console.log('VOU EMITIR EVENTO!', queryParams);
@@ -51,7 +51,7 @@ export class VerticalSlideshowComponent implements OnInit {
 
   public selectProject(project: ProjectItem): void {
     this.onProjectSelect.emit(project);
-    this.location.replaceState(window.location.pathname + `?project=${project.identifier}`);
+    this.location.replaceState(window.location.pathname + `?project=${project.name}`);
   }
 
   private _changeVisibleDescription(): void {
