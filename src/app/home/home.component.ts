@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {SlideshowComponent} from "../slideshow/slideshow.component";
 import {VerticalSlideshowComponent} from "../vertical-slideshow/vertical-slideshow.component";
-import {AsyncPipe, NgIf, NgOptimizedImage} from "@angular/common";
+import {AsyncPipe, Location, NgIf, NgOptimizedImage} from "@angular/common";
 import {ProjectItem} from "../vertical-slideshow/projects-config";
 import {MatIconModule} from "@angular/material/icon";
 import {AboutService} from "../services/about.service";
@@ -33,7 +33,7 @@ export class HomeComponent {
   public projectSelected: boolean = false;
   public selectedProject: ProjectItem | undefined;
 
-  constructor(public aboutService: AboutService) {
+  constructor(public aboutService: AboutService, private location: Location) {
     this.isMobile = UtilitiesService.isMobileDevice();
   }
 
@@ -48,6 +48,7 @@ export class HomeComponent {
   }
 
   showVerticalSlideshow() {
+    this.location.replaceState(window.location.pathname);
     this.projectSelected = false;
     this.selectedProject = undefined;
     const element = document.getElementById('menniz-logo');
